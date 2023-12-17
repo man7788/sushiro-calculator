@@ -2,6 +2,7 @@ import styles from './Body.module.css';
 import Red from './Dishes/Red';
 import Silver from './Dishes/Silver';
 import Gold from './Dishes/Gold';
+import Black from './Dishes/Black';
 
 const Body = () => {
   return (
@@ -9,6 +10,7 @@ const Body = () => {
       <Red />
       <Silver />
       <Gold />
+      <Black />
     </div>
   );
 };
