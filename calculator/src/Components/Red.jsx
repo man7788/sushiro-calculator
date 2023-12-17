@@ -9,9 +9,14 @@ function Red() {
     setTotal(total + 12);
   };
 
+  const onMinusOne = () => {
+    total !== 0 && setTotal(total - 12);
+  };
+
   return (
     <div className={styles.Red}>
       Red
+      <button onClick={onMinusOne}>-</button>
       <button onClick={onAddOne}>+</button>
     </div>
   );
