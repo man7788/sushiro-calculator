@@ -1,19 +1,17 @@
-import { useEffect, useState } from 'react';
 import styles from './Header.module.css';
 
-function Header({ newAmount = 0 }) {
-  const [amount, setAmout] = useState(0);
-
-  useEffect(() => {
-    setAmout(newAmount);
-  }, [amount]);
+const Header = ({ total }) => {
+  // const [finalAmount, setFinalAmount] = useState(0);
+  // useEffect(() => {
+  //   setFinalAmount(total * 1.1);
+  // }, [total]);
 
   return (
     <div className={styles.Header}>
       <div>總消費（含加一服務費）</div>
-      <div>${amount}</div>
+      <div>${total}</div>
     </div>
   );
-}
+};
 
 export default Header;

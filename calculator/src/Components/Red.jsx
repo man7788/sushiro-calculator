@@ -2,7 +2,7 @@ import styles from './Red.module.css';
 import { useContext, useState } from 'react';
 import { totalContext } from '../Contexts/totalContext';
 
-function Red() {
+const Red = () => {
   const [redAmount, setRedAmount] = useState(0);
   const { total, setTotal } = useContext(totalContext);
 
@@ -26,6 +26,6 @@ function Red() {
       <button onClick={onAddOne}>+</button>
     </div>
   );
-}
+};
 
 export default Red;
