@@ -1,7 +1,7 @@
-import './App.css';
+import styles from './App.module.css';
 
 function App() {
-  return <>Place Holder Text</>;
+  return <div className={styles.App}>Placeholder Text</div>;
 }
 
 export default App;
