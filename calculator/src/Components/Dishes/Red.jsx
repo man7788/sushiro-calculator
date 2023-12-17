@@ -1,6 +1,6 @@
 import styles from './Red.module.css';
 import { useContext, useState } from 'react';
-import { totalContext } from '../Contexts/totalContext';
+import { totalContext } from '../../Contexts/totalContext';
 
 const Red = () => {
   const [redAmount, setRedAmount] = useState(0);
