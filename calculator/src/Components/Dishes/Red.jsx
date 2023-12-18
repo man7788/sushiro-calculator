@@ -1,4 +1,4 @@
-import styles from './Red.module.css';
+import styles from './Dishes.module.css';
 import { useContext, useState } from 'react';
 import { totalContext } from '../../Contexts/totalContext';
 
@@ -7,7 +7,7 @@ const Red = () => {
   const { subTotal, setSubTotal } = useContext(totalContext);
 
   const onAddOne = () => {
-    setSubTotal(subTotal + 50);
+    setSubTotal(subTotal + 12);
     setRedAmount(redAmount + 1);
   };
 

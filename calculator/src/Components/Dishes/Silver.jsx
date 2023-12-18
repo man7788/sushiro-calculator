@@ -1,4 +1,4 @@
-import styles from './Silver.module.css';
+import styles from './Dishes.module.css';
 import { useContext, useState } from 'react';
 import { totalContext } from '../../Contexts/totalContext';
 
