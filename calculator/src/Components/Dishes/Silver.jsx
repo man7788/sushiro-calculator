@@ -4,16 +4,16 @@ import { totalContext } from '../../Contexts/totalContext';
 
 const Silver = () => {
   const [silverAmount, setSilverAmount] = useState(0);
-  const { total, setTotal } = useContext(totalContext);
+  const { subTotal, setSubTotal } = useContext(totalContext);
 
   const onAddOne = () => {
-    setTotal(total + 17);
+    setSubTotal(subTotal + 17);
     setSilverAmount(silverAmount + 1);
   };
 
   const onMinusOne = () => {
-    if (total !== 0 && silverAmount !== 0) {
-      setTotal(total - 17);
+    if (subTotal !== 0 && silverAmount !== 0) {
+      setSubTotal(subTotal - 17);
       setSilverAmount(silverAmount - 1);
     }
   };

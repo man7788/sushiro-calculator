@@ -5,12 +5,12 @@ import Body from './Components/Body';
 import { totalContext } from './Contexts/totalContext';
 
 const App = () => {
-  const [total, setTotal] = useState(0);
+  const [subTotal, setSubTotal] = useState(0);
 
   return (
     <div className={styles.App}>
-      <Header total={total} />
-      <totalContext.Provider value={{ total, setTotal }}>
+      <Header subTotal={subTotal} />
+      <totalContext.Provider value={{ subTotal, setSubTotal }}>
         <Body />
       </totalContext.Provider>
     </div>
