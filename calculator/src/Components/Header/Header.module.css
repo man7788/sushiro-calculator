@@ -1,5 +1,6 @@
 .Header {
-  border: 3px solid whitesmoke;
+  border-bottom: 1px solid rgb(167, 8, 25);
+  border-width: thick;
   display: grid;
   font-size: 2rem;
   padding: 1rem 1rem 1rem 1rem;
