@@ -19,11 +19,13 @@ const Black = () => {
   };
 
   return (
-    <div className={styles.Red}>
+    <div className={styles.dishItem}>
       Black
-      <button onClick={onMinusOne}>-</button>
-      {blackAmount}
-      <button onClick={onAddOne}>+</button>
+      <div>{blackAmount}</div>
+      <div className={styles.dishControl}>
+        <button onClick={onMinusOne}>-</button>
+        <button onClick={onAddOne}>+</button>
+      </div>
     </div>
   );
 };

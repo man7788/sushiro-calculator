@@ -19,11 +19,13 @@ const Red = () => {
   };
 
   return (
-    <div className={styles.Red}>
+    <div className={styles.dishItem}>
       Red
-      <button onClick={onMinusOne}>-</button>
-      {redAmount}
-      <button onClick={onAddOne}>+</button>
+      <div>{redAmount}</div>
+      <div className={styles.dishControl}>
+        <button onClick={onMinusOne}>-</button>
+        <button onClick={onAddOne}>+</button>
+      </div>
     </div>
   );
 };

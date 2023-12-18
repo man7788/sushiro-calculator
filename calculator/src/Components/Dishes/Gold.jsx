@@ -19,11 +19,13 @@ const Gold = () => {
   };
 
   return (
-    <div className={styles.Gold}>
+    <div className={styles.dishItem}>
       Gold
-      <button onClick={onMinusOne}>-</button>
-      {goldAmount}
-      <button onClick={onAddOne}>+</button>
+      <div>{goldAmount}</div>
+      <div className={styles.dishControl}>
+        <button onClick={onMinusOne}>-</button>
+        <button onClick={onAddOne}>+</button>
+      </div>
     </div>
   );
 };

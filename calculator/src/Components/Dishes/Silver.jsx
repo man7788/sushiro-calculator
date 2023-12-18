@@ -19,11 +19,13 @@ const Silver = () => {
   };
 
   return (
-    <div className={styles.Silver}>
+    <div className={styles.dishItem}>
       Silver
-      <button onClick={onMinusOne}>-</button>
-      {silverAmount}
-      <button onClick={onAddOne}>+</button>
+      <div>{silverAmount}</div>
+      <div className={styles.dishControl}>
+        <button onClick={onMinusOne}>-</button>
+        <button onClick={onAddOne}>+</button>
+      </div>
     </div>
   );
 };
