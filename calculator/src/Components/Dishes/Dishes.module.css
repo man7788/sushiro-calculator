@@ -1,13 +1,12 @@
 .dishItem {
-  /* border: 3px solid whitesmoke; */
-  height: fit-content;
   display: grid;
+  align-items: center;
   grid-template-columns: 2fr 1fr 1fr;
+  margin-bottom: 1rem;
 }
 
 .dishControl {
   display: flex;
-  margin-bottom: 1rem;
 }
 
 .dishControl button {
