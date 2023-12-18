@@ -12,7 +12,7 @@ const Sushi = ({ name, price }) => {
   };
 
   const onMinusOne = () => {
-    if (subTotal !== 0 && setAmount !== 0) {
+    if (subTotal !== 0 && amount !== 0) {
       setSubTotal(subTotal - price);
       setAmount(amount - 1);
     }
