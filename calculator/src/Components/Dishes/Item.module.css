@@ -1,15 +1,15 @@
-.dishItem {
+.Item {
   display: grid;
   align-items: center;
   grid-template-columns: 2fr 1fr 1fr;
   margin-bottom: 1rem;
 }
 
-.dishControl {
+.ItemControl {
   display: flex;
 }
 
-.dishControl button {
+.ItemControl button {
   width: 60px;
   background-color: rgb(167, 8, 25);
   color: #fff;
@@ -19,6 +19,6 @@
   font-size: 2rem;
 }
 
-.dishControl button:active {
+.ItemControl button:active {
   background-color: rgb(26, 18, 16);
 }

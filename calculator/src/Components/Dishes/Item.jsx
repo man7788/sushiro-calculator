@@ -1,4 +1,4 @@
-import styles from './Dishes.module.css';
+import styles from './Item.module.css';
 import { useContext, useState } from 'react';
 import { totalContext } from '../../Contexts/totalContext';
 
@@ -19,10 +19,10 @@ const Item = ({ name = '項目', price }) => {
   };
 
   return (
-    <div className={styles.dishItem}>
+    <div className={styles.Item}>
       {`${name} $${price}`}
       <div>{itemAmount}</div>
-      <div className={styles.dishControl}>
+      <div className={styles.ItemControl}>
         <button onClick={onMinusOne}>-</button>
         <button onClick={onAddOne}>+</button>
       </div>
