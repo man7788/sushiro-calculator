@@ -3,7 +3,7 @@ const ServiceCharge = ({ serviceCharge }) => {
   return (
     <div className={styles.serviceCharge}>
       <div>服務費</div>
-      <div className={styles.serviceCharge}>
+      <div className={styles.serviceChargePrice}>
         <div>$</div>
         <div> {serviceCharge}</div>
       </div>
