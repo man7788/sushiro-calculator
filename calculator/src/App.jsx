@@ -1,6 +1,6 @@
 import styles from './App.module.css';
 import { useState } from 'react';
-import Header from './Components/Header';
+import Header from './Components/Header/Header';
 import Body from './Components/Body';
 import { totalContext } from './Contexts/totalContext';
 

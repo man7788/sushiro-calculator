@@ -1,0 +1,33 @@
+.Header {
+  border: 3px solid whitesmoke;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  font-size: 2rem;
+}
+
+.subTotal {
+  grid-row: 1/2;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem 0 1rem;
+}
+
+.serviceCharge {
+  grid-row: 2/3;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem 0 1rem;
+}
+
+.finalTotal {
+  grid-row: 3/4;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem 0 1rem;
+}
+
+.subTotalPrice,
+.serviceChargePrice,
+.finalTotalPrice {
+  display: flex;
+}
