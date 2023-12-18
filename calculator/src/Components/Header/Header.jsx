@@ -1,28 +1,23 @@
 import styles from './Header.module.css';
 import { useState, useEffect } from 'react';
+import SubTotal from './SubTotal';
 
-const Header = ({ total }) => {
+const Header = ({ subTotal }) => {
   const [finalTotal, setFinaltotal] = useState(0);
   const [serviceCharge, setServiceCharge] = useState(0);
 
   useEffect(() => {
-    setServiceCharge(Math.trunc(total * 0.1));
-    setFinaltotal(total + serviceCharge);
-  }, [total]);
+    setServiceCharge(Math.trunc(subTotal * 0.1));
+    setFinaltotal(subTotal + serviceCharge);
+  }, [subTotal]);
 
   useEffect(() => {
-    setFinaltotal(total + serviceCharge);
+    setFinaltotal(subTotal + serviceCharge);
   }, [serviceCharge]);
 
   return (
     <div className={styles.Header}>
-      <div className={styles.subTotal}>
-        <div>小計</div>
-        <div className={styles.subTotalPrice}>
-          <div>$</div>
-          <div> {total}</div>
-        </div>
-      </div>
+      <SubTotal subTotal={subTotal} />
       <div className={styles.serviceCharge}>
         <div>服務費</div>
         <div className={styles.serviceChargePrice}>
