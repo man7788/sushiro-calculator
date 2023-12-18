@@ -1,5 +1,5 @@
 import styles from './Body.module.css';
-import Item from './Dishes/Item';
+import Item from './Items/Item';
 
 const Body = () => {
   return (
