@@ -2,26 +2,26 @@ import styles from './Dishes.module.css';
 import { useContext, useState } from 'react';
 import { totalContext } from '../../Contexts/totalContext';
 
-const Black = () => {
-  const [blackAmount, setBlackAmount] = useState(0);
+const Sushi = ({ name, price }) => {
+  const [amount, setAmount] = useState(0);
   const { subTotal, setSubTotal } = useContext(totalContext);
 
   const onAddOne = () => {
-    setSubTotal(subTotal + 27);
-    setBlackAmount(blackAmount + 1);
+    setSubTotal(subTotal + price);
+    setAmount(amount + 1);
   };
 
   const onMinusOne = () => {
-    if (subTotal !== 0 && blackAmount !== 0) {
-      setSubTotal(subTotal - 27);
-      setBlackAmount(blackAmount - 1);
+    if (subTotal !== 0 && setAmount !== 0) {
+      setSubTotal(subTotal - price);
+      setAmount(amount - 1);
     }
   };
 
   return (
     <div className={styles.dishItem}>
-      Black
-      <div>{blackAmount}</div>
+      {`${name} $${price}`}
+      <div>{amount}</div>
       <div className={styles.dishControl}>
         <button onClick={onMinusOne}>-</button>
         <button onClick={onAddOne}>+</button>
@@ -30,4 +30,4 @@ const Black = () => {
   );
 };
 
-export default Black;
+export default Sushi;
