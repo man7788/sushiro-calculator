@@ -2,7 +2,7 @@ import styles from './Dishes.module.css';
 import { useContext, useState } from 'react';
 import { totalContext } from '../../Contexts/totalContext';
 
-const Item = ({ price }) => {
+const Item = ({ name = '項目', price }) => {
   const [itemAmount, setItemAmount] = useState(0);
   const { subTotal, setSubTotal } = useContext(totalContext);
 
@@ -20,7 +20,7 @@ const Item = ({ price }) => {
 
   return (
     <div className={styles.dishItem}>
-      {`項目 $${price}`}
+      {`${name} $${price}`}
       <div>{itemAmount}</div>
       <div className={styles.dishControl}>
         <button onClick={onMinusOne}>-</button>
