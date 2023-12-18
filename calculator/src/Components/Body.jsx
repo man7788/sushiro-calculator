@@ -1,17 +1,14 @@
 import styles from './Body.module.css';
-import Red from './Dishes/Red';
-import Silver from './Dishes/Silver';
-import Gold from './Dishes/Gold';
-import Black from './Dishes/Black';
 import Item from './Dishes/Item';
+import Sushi from './Dishes/Sushi';
 
 const Body = () => {
   return (
     <div className={styles.Body}>
-      <Red />
-      <Silver />
-      <Gold />
-      <Black />
+      <Sushi name={'紅碟'} price={12} />
+      <Sushi name={'銀碟'} price={17} />
+      <Sushi name={'金碟'} price={22} />
+      <Sushi name={'黑碟'} price={27} />
       <Item price={8} />
       <Item price={12} />
       <Item price={17} />
