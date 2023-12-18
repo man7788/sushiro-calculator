@@ -5,15 +5,11 @@
   padding: 1rem 1rem 1rem 1rem;
 }
 
-.subTotal,
-.serviceCharge,
-.total {
+.headerItem {
   display: flex;
   justify-content: space-between;
 }
 
-.subTotalPrice,
-.serviceChargePrice,
-.totalPrice {
+.headerPrice {
   display: flex;
 }

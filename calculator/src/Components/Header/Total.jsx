@@ -1,9 +1,9 @@
 import styles from './Header.module.css';
 const Total = ({ total }) => {
   return (
-    <div className={styles.total}>
+    <div className={styles.headerItem}>
       <div>合計</div>
-      <div className={styles.totalPrice}>
+      <div className={styles.headerPrice}>
         <div>$</div>
         <div> {total}</div>
       </div>
