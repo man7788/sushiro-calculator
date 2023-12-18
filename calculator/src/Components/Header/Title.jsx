@@ -1,14 +1,15 @@
 import styles from './Header.module.css';
-const SubTotal = ({ subTotal }) => {
+
+const Title = ({ title, output }) => {
   return (
     <div className={styles.headerItem}>
-      <div>小計</div>
+      <div>{title}</div>
       <div className={styles.headerPrice}>
         <div>$</div>
-        <div> {subTotal}</div>
+        <div> {output}</div>
       </div>
     </div>
   );
 };
 
-export default SubTotal;
+export default Title;

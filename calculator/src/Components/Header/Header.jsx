@@ -1,8 +1,6 @@
 import styles from './Header.module.css';
 import { useState, useEffect } from 'react';
-import SubTotal from './SubTotal';
-import ServiceCharge from './ServiceCharge';
-import Total from './Total';
+import Title from './Title';
 
 const Header = ({ subTotal }) => {
   const [total, setTotal] = useState(0);
@@ -19,9 +17,9 @@ const Header = ({ subTotal }) => {
 
   return (
     <div className={styles.Header}>
-      <SubTotal subTotal={subTotal} />
-      <ServiceCharge serviceCharge={serviceCharge} />
-      <Total total={total} />
+      <Title title={'小計'} output={subTotal} />
+      <Title title={'服務費'} output={serviceCharge} />
+      <Title title={'合計'} output={total} />
     </div>
   );
 };
