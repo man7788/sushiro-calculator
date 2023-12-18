@@ -1,0 +1,25 @@
+.dishItem {
+  /* border: 3px solid whitesmoke; */
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+.dishControl {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.dishControl button {
+  width: 60px;
+  background-color: rgb(167, 8, 25);
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  margin: 0 0.5rem 0 0.5rem;
+  font-size: 2rem;
+}
+
+.dishControl button:active {
+  background-color: rgb(26, 18, 16);
+}
