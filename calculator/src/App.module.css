@@ -1,6 +1,6 @@
 .App {
-  background: rgb(45, 45, 45);
-  color: whitesmoke;
+  background: #fff;
+  color: rgb(26, 18, 16);
   display: grid;
   grid-template-rows: 1fr 10fr;
   height: 100vh;
