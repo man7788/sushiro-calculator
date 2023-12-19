@@ -21,7 +21,7 @@ const Item = ({ name = '項目', price }) => {
   return (
     <div className={styles.Item}>
       {`${name} $${price}`}
-      <div>{itemAmount}</div>
+      <div className={styles.ItemAmount}>{itemAmount}</div>
       <div className={styles.ItemControl}>
         <button onClick={onMinusOne}>−</button>
         <button onClick={onAddOne}>+</button>

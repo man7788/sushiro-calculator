@@ -1,22 +1,28 @@
 .Item {
   display: grid;
   align-items: center;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   margin-bottom: 1rem;
+}
+
+.ItemAmount {
+  display: flex;
+  justify-content: center;
 }
 
 .ItemControl {
   display: flex;
+  justify-content: flex-end;
 }
 
 .ItemControl button {
-  width: 60px;
   background-color: rgb(167, 8, 25);
-  color: #fff;
   border: none;
   border-radius: 100px;
-  margin: 0 0.5rem 0 0.5rem;
+  width: 60px;
+  color: #fff;
   font-size: 2rem;
+  margin: 0 0 0 0.5rem;
 }
 
 .ItemControl button:active {
