@@ -1,0 +1,36 @@
+.others {
+  border: 2px solid rgb(167, 8, 25);
+  border-radius: 100px;
+  text-align: center;
+  width: 150px;
+  color: rgb(26, 18, 16);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.othersForm form {
+  display: flex;
+  align-items: center;
+}
+
+.othersForm button {
+  background-color: rgb(167, 8, 25);
+  border: none;
+  border-radius: 100px;
+  width: 70px;
+  height: 37px;
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0 0 0 0.5rem;
+}
+
+.othersForm button:active {
+  background-color: rgb(26, 18, 16);
+}
+
+.othersForm input {
+  border: 2px solid rgb(167, 8, 25);
+  border-radius: 5px;
+  height: 30px;
+  margin-left: 0.5rem;
+}
