@@ -11,13 +11,15 @@ const Select = ({ extraPrices, setExtraPrices }) => {
     const newPriceList = [...extraPrices];
     newPriceList.push(Number(number[0]));
 
-    clearClickedPrice(Number(number[0]));
+    changeClickedPrice(e.target);
     setExtraPrices(newPriceList);
   };
 
-  const clearClickedPrice = (clickedPrice) => {
-    const newPrices = prices.filter((price) => price !== clickedPrice);
-    setPrices(newPrices);
+  const changeClickedPrice = (clickedPrice) => {
+    console.dir(clickedPrice);
+    clickedPrice.style.background = '#fff';
+    clickedPrice.style.color = 'rgb(26, 18, 16)';
+    clickedPrice.style.border = '2px solid rgb(167, 8, 25)';
   };
 
   return (
