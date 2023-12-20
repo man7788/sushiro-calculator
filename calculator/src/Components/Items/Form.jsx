@@ -29,6 +29,9 @@ const Form = ({ extraPrices, setExtraPrices }) => {
             value={newPrice}
             type="number"
             id="extra-price"
+            min="1"
+            max="999"
+            required
           />
           <button type="submit">加入</button>
         </form>
