@@ -1,0 +1,13 @@
+.Select button {
+  background-color: rgb(167, 8, 25);
+  border: none;
+  border-radius: 100px;
+  width: 70px;
+  color: #fff;
+  font-size: 1.8rem;
+  margin: 0 0 0 0.5rem;
+}
+
+.Select button:active {
+  background-color: rgb(26, 18, 16);
+}
