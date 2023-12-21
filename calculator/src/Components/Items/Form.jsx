@@ -4,18 +4,19 @@ import { useState } from 'react';
 const Form = ({ extraPrices, setExtraPrices }) => {
   const [newPrice, setNewPrice] = useState('');
 
+  const onhandleChange = (e) => {
+    setNewPrice(Number(e.target.value));
+  };
+
   const onSubmitTask = (e) => {
     e.preventDefault();
 
-    const newPriceList = [...extraPrices];
-    newPriceList.push(Number(newPrice));
-
-    setExtraPrices(newPriceList);
-    setNewPrice('');
-  };
-
-  const onhandleChange = (e) => {
-    setNewPrice(e.target.value);
+    if (!extraPrices.includes(newPrice)) {
+      const newPriceList = [...extraPrices];
+      newPriceList.push(newPrice);
+      setExtraPrices(newPriceList);
+      setNewPrice('');
+    }
   };
 
   return (
@@ -27,6 +28,7 @@ const Form = ({ extraPrices, setExtraPrices }) => {
           value={newPrice}
           type="number"
           id="extra-price"
+          placeholder="輸入價錢"
           min="1"
           max="999"
           required
