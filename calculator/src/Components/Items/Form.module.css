@@ -25,3 +25,7 @@
   width: 140px;
   margin-left: 0.5rem;
 }
+
+.othersForm input:focus {
+  background: lightgoldenrodyellow;
+}
