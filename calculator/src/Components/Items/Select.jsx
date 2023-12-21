@@ -16,22 +16,32 @@ const Select = ({ extraPrices, setExtraPrices }) => {
   };
 
   const changeClickedPrice = (clickedPrice) => {
-    console.dir(clickedPrice);
-    clickedPrice.style.background = '#fff';
-    clickedPrice.style.color = 'rgb(26, 18, 16)';
-    clickedPrice.style.border = '2px solid rgb(167, 8, 25)';
+    clickedPrice.style = clickedStyle;
   };
 
   return (
     <div className={styles.Select}>
       <div>選擇價錢:</div>
       {prices.map((price) => {
+        let clicked = null;
+        if (extraPrices.includes(price)) {
+          clicked = clickedStyle;
+        }
         return (
-          <button key={price} onClick={onHandleClick}>{`$${price}`}</button>
+          <button
+            key={price}
+            style={clicked}
+            onClick={clicked ? null : onHandleClick}>{`$${price}`}</button>
         );
       })}
     </div>
   );
+};
+
+const clickedStyle = {
+  background: '#fff',
+  color: 'rgb(26, 18, 16)',
+  border: '2px solid rgb(167, 8, 25)',
 };
 
 export default Select;
