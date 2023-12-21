@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import styles from './Body.module.css';
 import Item from './Items/Item';
-import Form from './Items/Form';
+import Form from './Controls/Form';
 import Extra from './Items/Extra';
-import Select from './Items/Select';
+import Select from './Controls/Select';
 
 const Body = () => {
   const [extraPrices, setExtraPrices] = useState([]);

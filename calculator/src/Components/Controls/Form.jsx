@@ -16,6 +16,8 @@ const Form = ({ extraPrices, setExtraPrices }) => {
       newPriceList.push(newPrice);
       setExtraPrices(newPriceList);
       setNewPrice('');
+    } else {
+      console.log('on99');
     }
   };
 
