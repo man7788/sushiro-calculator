@@ -4,7 +4,7 @@ import Item from './Items/Item';
 import Form from './Controls/Form';
 import Extra from './Items/Extra';
 import Select from './Controls/Select';
-import { extraContext } from '../Contexts/extraContext';
+import { ExtraContext } from '../Contexts/ExtraContext';
 import { BodyContext } from '../Contexts/BodyContext';
 
 const Body = () => {
@@ -14,7 +14,7 @@ const Body = () => {
 
   return (
     <BodyContext.Provider value={BodyDom}>
-      <extraContext.Provider value={{ allExtraItems }}>
+      <ExtraContext.Provider value={{ allExtraItems }}>
         <div className={styles.Body} ref={BodyDom}>
           <Item name={'紅碟'} price={12} />
           <Item name={'銀碟'} price={17} />
@@ -25,7 +25,7 @@ const Body = () => {
           <Select extraPrices={extraPrices} setExtraPrices={setExtraPrices} />
           <Form extraPrices={extraPrices} setExtraPrices={setExtraPrices} />
         </div>
-      </extraContext.Provider>
+      </ExtraContext.Provider>
     </BodyContext.Provider>
   );
 };
