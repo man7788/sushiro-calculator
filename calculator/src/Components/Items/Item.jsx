@@ -1,10 +1,19 @@
 import styles from './Item.module.css';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { totalContext } from '../../Contexts/totalContext';
+import { ExtraContext } from '../../Contexts/ExtraContext';
 
 const Item = ({ name = '項目', price }) => {
   const [itemAmount, setItemAmount] = useState(0);
   const { subTotal, setSubTotal } = useContext(totalContext);
+  const { allExtraItems } = useContext(ExtraContext);
+  const itemDom = useRef(null);
+
+  useEffect(() => {
+    if (name === '項目') {
+      allExtraItems.current[price] = itemDom.current;
+    }
+  }, []);
 
   const onAddOne = () => {
     setSubTotal(subTotal + price);
@@ -19,7 +28,7 @@ const Item = ({ name = '項目', price }) => {
   };
 
   return (
-    <div className={styles.Item}>
+    <div className={styles.Item} ref={itemDom}>
       {`${name} $${price}`}
       <div className={styles.ItemAmount}>{itemAmount}</div>
       <div className={styles.ItemControl}>
