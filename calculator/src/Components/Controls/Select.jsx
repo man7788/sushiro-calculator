@@ -1,9 +1,11 @@
 import styles from './Select.module.css';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import Button from './Button';
+import { BodyContext } from '../../Contexts/BodyContext';
 
 const Select = ({ extraPrices, setExtraPrices }) => {
   const [prices, setPrices] = useState([8, 12, 17, 19, 22, 24, 27, 32, 39, 59]);
+  const BodyDom = useContext(BodyContext);
 
   const onHandleClick = (e) => {
     const re = /\d+/;
@@ -14,6 +16,7 @@ const Select = ({ extraPrices, setExtraPrices }) => {
 
     changeClickedPrice(e.target);
     setExtraPrices(newPriceList);
+    BodyDom.current.scrollIntoView({ behavior: 'smooth', block: 'end' });
   };
 
   const changeClickedPrice = (clickedPrice) => {
