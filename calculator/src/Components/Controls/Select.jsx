@@ -1,5 +1,6 @@
 import styles from './Select.module.css';
 import { useState } from 'react';
+import Button from './Button';
 
 const Select = ({ extraPrices, setExtraPrices }) => {
   const [prices, setPrices] = useState([8, 12, 17, 19, 22, 24, 27, 32, 39, 59]);
@@ -28,10 +29,12 @@ const Select = ({ extraPrices, setExtraPrices }) => {
           clicked = clickedStyle;
         }
         return (
-          <button
+          <Button
             key={price}
-            style={clicked}
-            onClick={clicked ? null : onHandleClick}>{`$${price}`}</button>
+            price={price}
+            onHandleClick={onHandleClick}
+            clicked={clicked}
+          />
         );
       })}
     </div>
