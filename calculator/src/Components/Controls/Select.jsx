@@ -28,7 +28,7 @@ const Select = ({ extraPrices, setExtraPrices }) => {
 
   return (
     <div className={styles.Select}>
-      <div>選擇價錢:</div>
+      <div>加入價錢:</div>
       {prices.map((price) => {
         let clicked = null;
         if (extraPrices.includes(price)) {
