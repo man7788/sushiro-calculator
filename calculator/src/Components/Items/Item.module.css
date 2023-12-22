@@ -5,6 +5,10 @@
   margin-bottom: 1rem;
 }
 
+.delete {
+  width: 40px;
+}
+
 .ItemAmount {
   display: flex;
   justify-content: center;
