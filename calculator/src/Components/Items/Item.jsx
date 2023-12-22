@@ -3,17 +3,32 @@ import { useContext, useEffect, useRef, useState } from 'react';
 import { totalContext } from '../../Contexts/totalContext';
 import { ExtraContext } from '../../Contexts/ExtraContext';
 
-const Item = ({ name = '項目', price }) => {
+const Item = ({ name = '', price, extraPrices, setExtraPrices }) => {
   const [itemAmount, setItemAmount] = useState(0);
   const { subTotal, setSubTotal } = useContext(totalContext);
   const { allExtraItems } = useContext(ExtraContext);
   const itemDom = useRef(null);
+  const [isExtraItem, setIsExtraItem] = useState(false);
 
   useEffect(() => {
-    if (name === '項目') {
+    if (name === '') {
       allExtraItems.current[price] = itemDom.current;
+      setIsExtraItem(true);
     }
   }, []);
+
+  const onDelete = (e) => {
+    const re = /\d+/;
+    const number = re.exec(e.target.nextSibling.textContent);
+
+    const newExtraPrices = extraPrices.filter(
+      (price) => price !== Number(number),
+    );
+
+    setExtraPrices(newExtraPrices);
+    setSubTotal(subTotal - price * itemAmount);
+    console.log(newExtraPrices);
+  };
 
   const onAddOne = () => {
     setSubTotal(subTotal + price);
@@ -29,7 +44,10 @@ const Item = ({ name = '項目', price }) => {
 
   return (
     <div className={styles.Item} ref={itemDom}>
-      {`${name} $${price}`}
+      <div>
+        {isExtraItem && <button onClick={onDelete}>刪除</button>}
+        {`${name} $${price}`}
+      </div>
       <div className={styles.ItemAmount}>{itemAmount}</div>
       <div className={styles.ItemControl}>
         <button onClick={onMinusOne}>−</button>
