@@ -1,6 +1,6 @@
 import Item from './Item';
 
-const Extra = ({ extraPrices, setExtraPrices }) => {
+const Extra = ({ extraPrices, setExtraPrices, showDelete }) => {
   return (
     <>
       {extraPrices.map((item) => {
@@ -10,6 +10,7 @@ const Extra = ({ extraPrices, setExtraPrices }) => {
             price={item}
             extraPrices={extraPrices}
             setExtraPrices={setExtraPrices}
+            showDelete={showDelete}
           />
         );
       })}
