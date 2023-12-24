@@ -3,7 +3,13 @@ import { useContext, useEffect, useRef, useState } from 'react';
 import { totalContext } from '../../Contexts/totalContext';
 import { ExtraContext } from '../../Contexts/ExtraContext';
 
-const Item = ({ name = '', price, extraPrices, setExtraPrices }) => {
+const Item = ({
+  name = '',
+  price,
+  extraPrices,
+  setExtraPrices,
+  showDelete,
+}) => {
   const [itemAmount, setItemAmount] = useState(0);
   const { subTotal, setSubTotal } = useContext(totalContext);
   const { allExtraItems } = useContext(ExtraContext);
@@ -44,8 +50,8 @@ const Item = ({ name = '', price, extraPrices, setExtraPrices }) => {
 
   return (
     <div className={styles.Item} ref={itemDom}>
-      <div>
-        {isExtraItem && <button onClick={onDelete}>刪除</button>}
+      <div className={styles.delete}>
+        {isExtraItem && showDelete && <button onClick={onDelete}>刪除</button>}
         {`${name} $${price}`}
       </div>
       <div className={styles.ItemAmount}>{itemAmount}</div>
