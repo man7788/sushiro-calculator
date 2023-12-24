@@ -4,8 +4,11 @@ import Button from './Button';
 import { BodyContext } from '../../Contexts/BodyContext';
 
 const Select = ({ extraPrices, setExtraPrices }) => {
-  const [prices, setPrices] = useState([8, 12, 17, 19, 22, 24, 27, 32, 39, 59]);
   const BodyDom = useContext(BodyContext);
+
+  const [prices, setPrices] = useState([
+    8, 9, 12, 17, 19, 22, 24, 27, 32, 39, 59,
+  ]);
 
   useEffect(() => {
     BodyDom.current.scrollIntoView(false);
