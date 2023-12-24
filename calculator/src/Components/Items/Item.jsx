@@ -1,7 +1,6 @@
 import styles from './Item.module.css';
 import { useContext, useEffect, useRef, useState } from 'react';
 import { totalContext } from '../../Contexts/totalContext';
-import { ExtraContext } from '../../Contexts/ExtraContext';
 
 const Item = ({
   name = '',
@@ -12,13 +11,11 @@ const Item = ({
 }) => {
   const [itemAmount, setItemAmount] = useState(0);
   const { subTotal, setSubTotal } = useContext(totalContext);
-  const { allExtraItems } = useContext(ExtraContext);
   const itemDom = useRef(null);
   const [isExtraItem, setIsExtraItem] = useState(false);
 
   useEffect(() => {
     if (name === '') {
-      allExtraItems.current[price] = itemDom.current;
       setIsExtraItem(true);
     }
   }, []);
