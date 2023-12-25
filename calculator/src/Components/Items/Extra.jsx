@@ -1,18 +1,14 @@
+import { useContext } from 'react';
+import { ExtraContext } from '../../Contexts/ExtraContext';
 import Item from './Item';
 
-const Extra = ({ extraPrices, setExtraPrices, showDelete }) => {
+const Extra = ({ showDelete }) => {
+  const { extraPrices } = useContext(ExtraContext);
+
   return (
     <>
       {extraPrices.map((item) => {
-        return (
-          <Item
-            key={item}
-            price={item}
-            extraPrices={extraPrices}
-            setExtraPrices={setExtraPrices}
-            showDelete={showDelete}
-          />
-        );
+        return <Item key={item} price={item} showDelete={showDelete} />;
       })}
     </>
   );
