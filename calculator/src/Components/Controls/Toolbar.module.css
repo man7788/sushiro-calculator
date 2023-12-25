@@ -1,0 +1,16 @@
+.Toolbar {
+  border: 2px solid green;
+  display: flex;
+}
+
+.Toolbar button {
+  background-color: rgb(167, 8, 25);
+  border: none;
+  width: 100%;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.Toolbar button:active {
+  background-color: rgb(26, 18, 16);
+}
