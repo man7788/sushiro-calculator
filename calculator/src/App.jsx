@@ -18,8 +18,8 @@ const App = () => {
         value={{ extraPrices, setExtraPrices, showDelete, setShowDelete }}>
         <totalContext.Provider value={{ subTotal, setSubTotal }}>
           <Body />
-          <Toolbar />
         </totalContext.Provider>
+        <Toolbar />
       </ExtraContext.Provider>
     </div>
   );
