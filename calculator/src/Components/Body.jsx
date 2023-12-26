@@ -4,15 +4,9 @@ import Item from './Items/Item';
 import Form from './Controls/Form';
 import Extra from './Items/Extra';
 
-const Body = ({ setBodyProvider }) => {
-  const BodyDom = useRef(null);
-
-  useEffect(() => {
-    setBodyProvider(BodyDom);
-  }, [BodyDom]);
-
+const Body = () => {
   return (
-    <div className={styles.Body} ref={BodyDom}>
+    <div className={styles.Body}>
       <Item name={'紅碟'} price={12} />
       <Item name={'銀碟'} price={17} />
       <Item name={'金碟'} price={22} />
