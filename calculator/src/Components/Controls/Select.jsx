@@ -1,18 +1,17 @@
 import styles from './Select.module.css';
 import { useState, useContext, useEffect } from 'react';
 import Button from './Button';
-import { BodyContext } from '../../Contexts/BodyContext';
+// import { BodyContext } from '../../Contexts/BodyContext';
 
 const Select = ({ extraPrices, setExtraPrices }) => {
-  const BodyDom = useContext(BodyContext);
-
+  // const { BodyProvider } = useContext(BodyContext);
   const [prices, setPrices] = useState([
     8, 9, 12, 17, 19, 22, 24, 27, 32, 39, 59,
   ]);
 
-  useEffect(() => {
-    BodyDom.current.scrollIntoView(false);
-  }, [extraPrices]);
+  // useEffect(() => {
+  //   BodyProvider.current.scrollIntoView(false);
+  // }, [extraPrices]);
 
   const onHandleClick = (e) => {
     const re = /\d+/;
@@ -31,7 +30,6 @@ const Select = ({ extraPrices, setExtraPrices }) => {
 
   return (
     <div className={styles.Select}>
-      <div>加入價錢:</div>
       {prices.map((price) => {
         let clicked = null;
         if (extraPrices.includes(price)) {
