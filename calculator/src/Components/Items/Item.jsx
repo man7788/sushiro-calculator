@@ -43,8 +43,8 @@ const Item = ({ name = '', price }) => {
   return (
     <div className={styles.Item} ref={itemDom}>
       <div className={styles.delete}>
-        {isExtraItem && showDelete && <button onClick={onDelete}>刪除</button>}
         {`${name} $${price}`}
+        {isExtraItem && showDelete && <button onClick={onDelete}>刪除</button>}
       </div>
       <div className={styles.ItemAmount}>{itemAmount}</div>
       <div className={styles.ItemControl}>
