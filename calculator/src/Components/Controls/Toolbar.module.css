@@ -1,16 +1,19 @@
+.ToolbarContainer {
+  background: #fff;
+  position: sticky;
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
 .Toolbar {
-  border: 2px solid green;
   display: flex;
 }
 
 .Toolbar button {
   background-color: rgb(167, 8, 25);
-  border: none;
+  border: 2px solid rgb(167, 8, 25);
   width: 100%;
   color: #fff;
   font-size: 2rem;
-}
-
-.Toolbar button:active {
-  background-color: rgb(26, 18, 16);
 }
