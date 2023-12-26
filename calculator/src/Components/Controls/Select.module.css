@@ -1,3 +1,6 @@
+.Select {
+  border-top: 2px solid rgb(167, 8, 25);
+}
 .Select button {
   background-color: rgb(167, 8, 25);
   border: 2px solid rgb(167, 8, 25);
