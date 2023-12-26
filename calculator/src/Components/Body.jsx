@@ -6,7 +6,6 @@ import Extra from './Items/Extra';
 import { BodyContext } from '../Contexts/BodyContext';
 
 const Body = () => {
-  const [showDelete, setShowDelete] = useState(false);
   const BodyDom = useRef(null);
 
   return (
@@ -16,7 +15,7 @@ const Body = () => {
         <Item name={'銀碟'} price={17} />
         <Item name={'金碟'} price={22} />
         <Item name={'黑碟'} price={27} />
-        <Extra showDelete={showDelete} />
+        <Extra />
         {/* <Form extraPrices={extraPrices} setExtraPrices={setExtraPrices} /> */}
       </div>
     </BodyContext.Provider>
