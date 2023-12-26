@@ -9,17 +9,16 @@ import { ExtraContext } from './Contexts/ExtraContext';
 const App = () => {
   const [subTotal, setSubTotal] = useState(0);
   const [extraPrices, setExtraPrices] = useState([]);
+  const [showDelete, setShowDelete] = useState(false);
 
   return (
     <div className={styles.App}>
       <Header subTotal={subTotal} />
-      <ExtraContext.Provider value={{ extraPrices, setExtraPrices }}>
+      <ExtraContext.Provider
+        value={{ extraPrices, setExtraPrices, showDelete, setShowDelete }}>
         <totalContext.Provider value={{ subTotal, setSubTotal }}>
           <Body />
-          <Toolbar
-          // showDelete={showDelete}
-          // setShowDelete={setShowDelete}
-          />
+          <Toolbar />
         </totalContext.Provider>
       </ExtraContext.Provider>
     </div>
