@@ -18,7 +18,7 @@ const Item = ({ name = '', price }) => {
 
   const onDelete = (e) => {
     const re = /\d+/;
-    const number = Number(re.exec(e.target.parentNode.textContent));
+    const number = Number(re.exec(e.target.parentNode.parentNode.innerText));
 
     const newExtraPrices = extraPrices.filter((price) => price !== number);
 
@@ -40,15 +40,20 @@ const Item = ({ name = '', price }) => {
 
   return (
     <div className={styles.Item} ref={itemDom}>
-      <div className={styles.delete}>
-        {`${name} $${price}`}
-        {isExtraItem && showDelete && <button onClick={onDelete}>刪除</button>}
-      </div>
+      {`${name} $${price}`}
       <div className={styles.ItemAmount}>{itemAmount}</div>
-      <div className={styles.ItemControl}>
-        <button onClick={onMinusOne}>−</button>
-        <button onClick={onAddOne}>+</button>
-      </div>
+      {isExtraItem && showDelete ? (
+        <div className={styles.delete}>
+          {isExtraItem && showDelete && (
+            <button onClick={onDelete}>刪除</button>
+          )}
+        </div>
+      ) : (
+        <div className={styles.ItemControl}>
+          <button onClick={onMinusOne}>−</button>
+          <button onClick={onAddOne}>+</button>
+        </div>
+      )}
     </div>
   );
 };
