@@ -56,13 +56,11 @@ const Toolbar = () => {
 const clickedSelect = {
   background: '#fff',
   color: 'rgb(26, 18, 16)',
-  border: '2px solid rgb(167, 8, 25)',
 };
 
 const clickedDelete = {
   background: '#fff',
   color: 'rgb(26, 18, 16)',
-  border: '2px solid rgb(167, 8, 25)',
 };
 
 export default Toolbar;
