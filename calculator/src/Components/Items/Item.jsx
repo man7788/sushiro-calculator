@@ -18,11 +18,9 @@ const Item = ({ name = '', price }) => {
 
   const onDelete = (e) => {
     const re = /\d+/;
-    const number = re.exec(e.target.nextSibling.textContent);
+    const number = Number(re.exec(e.target.parentNode.textContent));
 
-    const newExtraPrices = extraPrices.filter(
-      (price) => price !== Number(number),
-    );
+    const newExtraPrices = extraPrices.filter((price) => price !== number);
 
     setExtraPrices(newExtraPrices);
     setSubTotal(subTotal - price * itemAmount);
