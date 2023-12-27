@@ -46,7 +46,7 @@ const Toolbar = () => {
         <button
           style={showDelete ? clickedDelete : null}
           onClick={onShowDelete}>
-          刪除
+          修改
         </button>
       </div>
     </div>
