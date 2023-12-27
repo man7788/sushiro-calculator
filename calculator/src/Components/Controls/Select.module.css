@@ -1,14 +1,18 @@
 .Select {
-  border-top: 2px solid rgb(167, 8, 25);
+  border-top: 5px solid rgb(167, 8, 25);
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: center;
 }
+
 .Select button {
-  background-color: rgb(167, 8, 25);
+  background: rgb(167, 8, 25);
   border: 2px solid rgb(167, 8, 25);
   border-radius: 100px;
   width: 70px;
   color: #fff;
   font-size: 1.8rem;
-  margin: 0 0 0 0.5rem;
+  margin: 0.5rem;
 }
 
 .Select button:active {
