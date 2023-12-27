@@ -3,7 +3,7 @@
   border-radius: 10px;
   display: grid;
   align-items: center;
-  grid-template-columns: 1.5fr 1fr 1.5fr;
+  grid-template-columns: 1.5fr 1fr minmax(137px, 1.5fr);
   height: 70px;
   margin: 0 0.8rem 0.8rem 0.8rem;
   padding: 1rem;
@@ -15,7 +15,7 @@
 .delete {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .delete button {
