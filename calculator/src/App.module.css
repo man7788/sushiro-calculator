@@ -4,7 +4,7 @@
   background: #fff;
   color: rgb(26, 18, 16);
   display: grid;
-  grid-template-rows: 1fr 10fr;
-  height: 100vh;
+  min-height: 100vh;
+  grid-template-rows: 145px auto 0fr;
   font-family: 'Poppins', sans-serif;
 }
