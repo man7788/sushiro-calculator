@@ -23,12 +23,10 @@ const Toolbar = () => {
   };
 
   const onShowDelete = () => {
-    if (extraPrices.length > 0) {
-      if (!showDelete) {
-        setShowDelete(!showDelete);
-      } else {
-        setShowDelete(!showDelete);
-      }
+    if (!showDelete) {
+      setShowDelete(!showDelete);
+    } else {
+      setShowDelete(!showDelete);
     }
   };
 
