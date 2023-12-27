@@ -1,17 +1,11 @@
 import styles from './Select.module.css';
-import { useState, useContext, useEffect } from 'react';
+import { useState } from 'react';
 import Button from './Button';
-// import { BodyContext } from '../../Contexts/BodyContext';
 
 const Select = ({ extraPrices, setExtraPrices }) => {
-  // const { BodyProvider } = useContext(BodyContext);
   const [prices, setPrices] = useState([
     8, 9, 12, 17, 19, 22, 24, 27, 32, 39, 59,
   ]);
-
-  // useEffect(() => {
-  //   BodyProvider.current.scrollIntoView(false);
-  // }, [extraPrices]);
 
   const onHandleClick = (e) => {
     const re = /\d+/;
