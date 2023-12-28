@@ -7,16 +7,19 @@
 }
 
 .Toolbar {
-  background: rgb(167, 8, 25);
+  background: #fff;
+  border-top: 5px solid rgb(167, 8, 25);
   display: flex;
+  justify-content: space-evenly;
 }
 
 .Toolbar button {
   background: rgb(167, 8, 25);
-  border: none;
+  border: 2px solid rgb(167, 8, 25);
   border-radius: 100px;
-  width: 100%;
+  width: 40%;
   color: #fff;
-  font-size: 2em;
+  font-size: 1.5em;
   margin: 0.5rem;
+  padding: 0.25rem;
 }
