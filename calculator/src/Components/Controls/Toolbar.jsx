@@ -37,28 +37,18 @@ const Toolbar = () => {
       )}
       <div className={styles.Toolbar}>
         <button
-          style={showSelect ? clickedSelect : null}
+          className={showSelect ? styles.activeButton : styles.defaultButton}
           onClick={onShowSelect}>
           加入
         </button>
         <button
-          style={showDelete ? clickedDelete : null}
+          className={showDelete ? styles.activeButton : styles.defaultButton}
           onClick={onShowDelete}>
           修改
         </button>
       </div>
     </div>
   );
-};
-
-const clickedSelect = {
-  background: '#fff',
-  color: 'rgb(26, 18, 16)',
-};
-
-const clickedDelete = {
-  background: '#fff',
-  color: 'rgb(26, 18, 16)',
 };
 
 export default Toolbar;
