@@ -1,9 +1,16 @@
-.othersForm form {
+.Form {
+  grid-row: 4/5;
+  grid-column: 1/5;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  padding-left: 0.5rem;
+}
+.Form form {
   display: flex;
   align-items: center;
 }
 
-.othersForm button {
+.Form button {
   background-color: rgb(167, 8, 25);
   border: none;
   border-radius: 100px;
@@ -14,18 +21,23 @@
   margin: 0 0 0 0.5rem;
 }
 
-.othersForm button:active {
+.Form button:active {
   background-color: rgb(26, 18, 16);
 }
 
-.othersForm input {
+.Form input {
   border: 2px solid rgb(167, 8, 25);
-  border-radius: 5px;
-  height: 30px;
+  border-radius: 10px;
+  height: 40px;
   width: 140px;
+  font-size: 1.5rem;
   margin-left: 0.5rem;
 }
 
-.othersForm input:focus {
+.Form input:focus {
   background: lightgoldenrodyellow;
+}
+
+.Form input::placeholder {
+  font-size: 1rem;
 }
