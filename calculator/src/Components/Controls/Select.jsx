@@ -1,11 +1,11 @@
 import styles from './Select.module.css';
 import { useState } from 'react';
 import Button from './Button';
+import Form from './Form';
 
 const Select = ({ extraPrices, setExtraPrices }) => {
-  const [prices, setPrices] = useState([
-    8, 9, 12, 17, 19, 22, 24, 27, 32, 39, 59,
-  ]);
+  const [newPrice, setNewPrice] = useState('');
+  const prices = [8, 9, 12, 17, 19, 22, 24, 27, 32, 39, 59];
 
   const onHandleClick = (e) => {
     const re = /\d+/;
@@ -33,6 +33,12 @@ const Select = ({ extraPrices, setExtraPrices }) => {
           />
         );
       })}
+      <Form
+        newPrice={newPrice}
+        setNewPrice={setNewPrice}
+        extraPrices={extraPrices}
+        setExtraPrices={setExtraPrices}
+      />
     </div>
   );
 };
