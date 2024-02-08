@@ -1,5 +1,5 @@
 import styles from './App.module.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from './Components/Header/Header';
 import Body from './Components/Body';
 import Toolbar from './Components/Controls/Toolbar';
@@ -10,6 +10,17 @@ const App = () => {
   const [subTotal, setSubTotal] = useState(0);
   const [extraPrices, setExtraPrices] = useState([]);
   const [showDelete, setShowDelete] = useState(false);
+
+  useEffect(() => {
+    const unloadCallback = (event) => {
+      event.preventDefault();
+      event.returnValue = '';
+      return '';
+    };
+
+    window.addEventListener('beforeunload', unloadCallback);
+    return () => window.removeEventListener('beforeunload', unloadCallback);
+  }, []);
 
   return (
     <div className={styles.App}>
