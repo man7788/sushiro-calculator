@@ -1,32 +1,28 @@
 import styles from './Form.module.css';
-import { useState } from 'react';
 
-const Form = ({ extraPrices, setExtraPrices }) => {
-  const [newPrice, setNewPrice] = useState('');
-
-  const onhandleChange = (e) => {
+const Form = ({ newPrice, setNewPrice, extraPrices, setExtraPrices }) => {
+  const onHandleChange = (e) => {
     setNewPrice(Number(e.target.value));
   };
 
   const onSubmitTask = (e) => {
     e.preventDefault();
-
     if (!extraPrices.includes(newPrice)) {
       const newPriceList = [...extraPrices];
       newPriceList.push(newPrice);
       setExtraPrices(newPriceList);
       setNewPrice('');
     } else {
-      console.log('on99');
+      alert('請使用現有價錢項目');
     }
   };
 
   return (
-    <div className={styles.othersForm}>
+    <div className={styles.Form}>
       <form method="" onSubmit={onSubmitTask}>
         <label htmlFor="extra-price"> 價錢:</label>
         <input
-          onChange={onhandleChange}
+          onChange={onHandleChange}
           value={newPrice}
           type="number"
           id="extra-price"
