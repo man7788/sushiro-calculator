@@ -44,9 +44,7 @@ const Item = ({ name = '', price }) => {
       <div className={styles.ItemAmount}>{itemAmount}</div>
       {isExtraItem && showDelete ? (
         <div className={styles.delete}>
-          {isExtraItem && showDelete && (
-            <button onClick={onDelete}>刪除</button>
-          )}
+          <button onClick={onDelete}>刪除</button>
         </div>
       ) : (
         <div className={styles.ItemControl}>
