@@ -1,0 +1,16 @@
+.activeButton,
+.defaultButton {
+  background: rgb(167, 8, 25);
+  border: 2px solid rgb(167, 8, 25);
+  border-radius: 100px;
+  width: 70px;
+  height: 37px;
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0.5rem;
+}
+
+.activeButton {
+  background: #fff;
+  color: rgb(26, 18, 16);
+}
