@@ -14,12 +14,7 @@ const Select = ({ extraPrices, setExtraPrices }) => {
     const newPriceList = [...extraPrices];
     newPriceList.push(Number(number[0]));
 
-    changeClickedPrice(e.target);
     setExtraPrices(newPriceList);
-  };
-
-  const changeClickedPrice = (clickedPrice) => {
-    clickedPrice.style = clickedStyle;
   };
 
   return (
@@ -27,7 +22,7 @@ const Select = ({ extraPrices, setExtraPrices }) => {
       {prices.map((price) => {
         let clicked = null;
         if (extraPrices.includes(price)) {
-          clicked = clickedStyle;
+          clicked = true;
         }
         return (
           <Button
@@ -40,11 +35,6 @@ const Select = ({ extraPrices, setExtraPrices }) => {
       })}
     </div>
   );
-};
-
-const clickedStyle = {
-  background: '#fff',
-  color: 'rgb(26, 18, 16)',
 };
 
 export default Select;
