@@ -40,4 +40,5 @@
 
 .Form input::placeholder {
   font-size: 1rem;
+  padding-left: 0.5rem;
 }
