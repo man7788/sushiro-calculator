@@ -7,7 +7,7 @@ const Header = ({ subTotal }) => {
   const [serviceCharge, setServiceCharge] = useState(0);
 
   useEffect(() => {
-    setServiceCharge(Math.trunc(subTotal * 0.1));
+    setServiceCharge(Math.round(subTotal * 0.1));
     setTotal(subTotal + serviceCharge);
   }, [subTotal]);
 
